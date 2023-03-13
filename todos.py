@@ -11,6 +11,7 @@ header = """  _____         _
 print(header)
 
 todos = []
+completed = []
 while True:
     for i in range(len(todos)):
         print(f"{i+1}) {todos[i]}")
@@ -25,8 +26,13 @@ while True:
         if idx >= len(todos):
           print("THER IS NO TODO WITH THAT NUMBER!")
         else:
-          todos.pop(idx)
+          done_todo = todos.pop(idx)
+          completed.append(done_todo)
     else:
         todos.append(command)
     # Print todos from list 
 print("OK. GOODBYE!")   
+if completed:
+   print(f"You have completed {len(completed)} todos today: ")
+   for todo in completed:
+      print(f"*{todo}")
