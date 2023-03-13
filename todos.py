@@ -21,6 +21,11 @@ while True:
     command = input("> ")
     if command == 'q':
         break
+    elif command == "h":
+       print("TODO LIST HELP")
+       print("Type 'q' to quit")
+       print("To add a todo to the list, type it and hit enter")
+       print("To complete a todo enter its number")
     elif command.isnumeric():
         idx = int(command) -1
         if idx >= len(todos):
