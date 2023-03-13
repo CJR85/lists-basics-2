@@ -20,6 +20,12 @@ while True:
     command = input("> ")
     if command == 'q':
         break
+    elif command.isnumeric():
+        idx = int(command) -1
+        if idx >= len(todos):
+          print("THER IS NO TODO WITH THAT NUMBER!")
+        else:
+          todos.pop(idx)
     else:
         todos.append(command)
     # Print todos from list 
